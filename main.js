@@ -1,13 +1,9 @@
-const v="";
+
 
 /* Sonido para los botones 
 const sonidoBoton = new Audio("./Sonido/sonidoBoton.mp3");
 */
-let gameTime=200;
 
-let timeLeft= gameTime;
-
-let timeInterval;
 
 /*
 function Almacenar(Nombre,Puntaje){
@@ -28,6 +24,14 @@ function SumarPuntaje(v){
 
 }
 */
+const puntaje=0;
+
+let gameTime=200;
+
+let timeLeft= gameTime;
+
+let timeInterval;
+
 const TimerDisplay = document.createElement("div");
 
 TimerDisplay.id="timer";
@@ -43,18 +47,38 @@ document.body.appendChild(TimerDisplay);
 function actualizarTimer(){
     let minutes = Math.floor(timeLeft/60);
 
-    let seconds = timeInterval %60
+    let seconds = timeInterval % 60
 
     TimerDisplay.innerText = "Tiempo "+minutes+":"+seconds
 
-    if(timeLeft---0){
-        clearInterval(timeInterval)
+    if(timeLeft --- 0){
+        clearInterval(timeInterval);
     }
-    timeLeft --
+    timeLeft --;
 
 }
 
 (function starTime(){
     timeInterval= setInterval(actualizarTimer,1000)
 })()
+
+//revisarrrr
+let nombreJugador = localStorage.getItem("nombreJugador") || prompt("Ingrese el nombre del jugador");
+
+const jugador = document.cretateElement("div");
+infoDisplay.style.position ="absolute";
+infoDisplay.style.top ="60px";
+infoDisplay.style.left ="50%x";
+infoDisplay.style.transform ="translateX(-50%)";
+infoDisplay.style.frontSize ="20px";
+infoDisplay.style.color ="#fff";
+
+
+jugador.innterHTML ="Nombre del jugador"+{nombreJugador};
+
+document.body.appendChild(jugador);
+
+///1:23
+console.log(localStorage.setItem("nombreJugador"));
+
 
