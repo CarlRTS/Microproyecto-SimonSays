@@ -28,6 +28,23 @@ body{
 
     grid-gap: 10px;
   }
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    translate: 70px -300px;
+  }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;;
+    grid-gap: 10px;
+    
+  }
  
   .red {
       width: 100px;
@@ -77,6 +94,14 @@ body{
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
     
     
+}
+
+.mdi {
+  font-size: 3rem;
+}
+
+#tiempoTranscurrido {
+  font-size: 4rem;
 }
 
 
