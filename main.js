@@ -1,84 +1,37 @@
 
 
-/* Sonido para los botones 
-const sonidoBoton = new Audio("./Sonido/sonidoBoton.mp3");
-*/
+(function clear(){
+    localStorage.clear();
+})();
 
+(function guardar_user(){
 
-/*
-function Almacenar(Nombre,Puntaje){
-    const v =localStorage.setItem(Nombre,Puntaje);
-    
-    return v
-}
-/*
-function SumarPuntaje(v){
-    if(VerificarNombre()==true){
-        const i =localStorage.getItem(Puntaje);
-        Puntaje=i+1;
-        localStorage.setItem(Nombre,Puntaje);
+let Username = localStorage.getItem("Username") || prompt('Escribe tu nombre de usuario!: ');
 
-    }
+localStorage.setItem("Username", Username);
 
+const user = document.createElement("div");
+user.style.position = "absolute";
+user.style.top = "60px";
+user.style.left = "50px";
+user.style.transform = "translateX(50)";
+user.style.fontFamily = "Roboto";
+user.style.fontSize = "20px";
+user.style.color = "#fff";
+user.style.alignSelf = "center";
+user.style.backgroundColor = "0000FF";
 
+user.innerHTML = 'Jugador: '+Username;
 
-}
-*/
-const puntaje=0;
+document.body.appendChild(user);
 
-let gameTime=200;
+})();
 
-let timeLeft= gameTime;
-
-let timeInterval;
-
-const TimerDisplay = document.createElement("div");
-
-TimerDisplay.id="timer";
-TimerDisplay.style.position = "absolute";
-
-TimerDisplay.style.top="20px"
-TimerDisplay.style.left = "50%"
-TimerDisplay.style.fontSize="24px"
-TimerDisplay.style.color = "#fff"
-
-document.body.appendChild(TimerDisplay);
-
-function actualizarTimer(){
-    let minutes = Math.floor(timeLeft/60);
-
-    let seconds = timeInterval % 60
-
-    TimerDisplay.innerText = "Tiempo "+minutes+":"+seconds
-
-    if(timeLeft --- 0){
-        clearInterval(timeInterval);
-    }
-    timeLeft --;
-
+function mostrar_user(){
+    localStorage.getItem("Username")
 }
 
-(function starTime(){
-    timeInterval= setInterval(actualizarTimer,1000)
-})()
-
-//revisarrrr
-let nombreJugador = localStorage.getItem("nombreJugador") || prompt("Ingrese el nombre del jugador");
-
-const jugador = document.cretateElement("div");
-infoDisplay.style.position ="absolute";
-infoDisplay.style.top ="60px";
-infoDisplay.style.left ="50%x";
-infoDisplay.style.transform ="translateX(-50%)";
-infoDisplay.style.frontSize ="20px";
-infoDisplay.style.color ="#fff";
 
 
-jugador.innterHTML ="Nombre del jugador"+{nombreJugador};
-
-document.body.appendChild(jugador);
-
-///1:23
-console.log(localStorage.setItem("nombreJugador"));
 
 
