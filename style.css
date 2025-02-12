@@ -96,13 +96,19 @@ body{
     
 }
 
-.mdi {
-  font-size: 3rem;
+.cronometro {
+  font-size: 48px;
+  margin-bottom: 20px;
+
+  
+}
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 5px;
 }
 
-#tiempoTranscurrido {
-  font-size: 4rem;
-}
+   
 
 
 
