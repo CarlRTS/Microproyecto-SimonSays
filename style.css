@@ -49,19 +49,27 @@ body{
   .red {
       width: 100px;
     height: 100px;
-    background-color: rgb(239, 102, 102);
+    background-color: rgb(250, 2, 2);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
   }
-  .red.active {
+  .red.active{
     background-color: rgb(255, 38, 0);
     box-shadow: 0 5px 10px rgb(red) ;
   }
 
+  .red:hover{
+    box-shadow: 0 0 20px 10px rgba(128, 4, 4, 0.22);
+  }
+
   .blue {
-      width: 100px;
+    width: 100px;
     height: 100px;
     background-color: blue;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  .blue:hover{
+    box-shadow: 0 0 20px 10px rgba(2, 98, 243, 0.22);
   }
 
   .blue.active{
@@ -79,6 +87,10 @@ body{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
   }
 
+  .green:hover{
+    box-shadow: 0 0 20px 10px rgba(1, 252, 135, 0.22);
+  }
+
   .green.active{
     background-color: chartreuse;
     box-shadow: 0 5px 10px green;
@@ -90,13 +102,16 @@ body{
   .yellow {
       width: 100px;
     height: 100px;
-    background-color: rgb(246, 246, 186);
+    background-color: rgb(255, 208, 1);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
   }
 
   .yellow.active{
     background-color: rgb(255, 213, 0);
     box-shadow: 0 5px 10px rgb(239, 239, 113) ;
+  }
+  .yellow:hover{
+    box-shadow: 0 0 20px 10px rgba(252, 248, 1, 0.22);
   }
 
 
@@ -126,6 +141,10 @@ body{
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
     
     
+}
+
+.boton:hover{
+  box-shadow: 0 0 20px 10px rgba(19, 4, 158, 0.22);
 }
 
 .title {

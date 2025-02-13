@@ -3,6 +3,7 @@ const red = document.getElementById('red');
 const blue = document.getElementById('blue');
 const green = document.getElementById('green');
 const yellow = document.getElementById('yellow');
+var audio = document.querySelector("audio");
 
 
 
@@ -42,42 +43,48 @@ function mostrar_user(){
 }
 
 
-
+const buttonred = document.querySelector(".red");
+const buttonblue = document.querySelector(".blue");
+const buttongreen = document.querySelector(".green");
+const buttonyellow = document.querySelector(".yellow");
 const boton = document.querySelector("button")
 boton.addEventListener('click', () =>{
     let start = document.querySelector ("button")
+    audio.play();
     start.innerHTML = 'El juego empezó'
+    generarSecuencia();
+    
+    /*buttonred.addEventListener("click",() => {
+        buttonred.classList.toggle("active");
+    });
+    buttonblue.addEventListener("click",() => {
+        buttonblue.classList.toggle("active");
+    });
+    buttongreen.addEventListener("click",() =>{
+        buttongreen.classList.toggle("active");
+    });
+        buttonyellow.addEventListener("click", () =>{
+        buttonyellow.classList.toggle("active");
+});*/
+    
 })
-
-
-
-const buttonred = document.querySelector(".red");
-buttonred.addEventListener("click",() => {
-    buttonred.classList.toggle("active");
-});
-
-
-const buttonblue = document.querySelector(".blue");
-buttonblue.addEventListener("click",() => {
-    buttonblue.classList.toggle("active");
-});
-
-
-const buttongreen = document.querySelector(".green");
-buttongreen.addEventListener("click",() =>{
-    buttongreen.classList.toggle("active");
-});
-
-const buttonyellow = document.querySelector(".yellow");
-buttonyellow.addEventListener("click", () =>{
-    buttonyellow.classList.toggle("active");
-});
-
 
 
 function generarSecuencia(){
     const secuencia = new Array(nivel).fill(0).map(n => Math.floor(Math.random() * 4) )
-
+    if(secuencia[0]==0){
+        buttonred.classList.toggle("active");
+    }
+    if(secuencia[0]==1){
+        buttonblue.classList.toggle("active");
+    }
+    if(secuencia[0]==2){
+        buttonyellow.classList.toggle("active");
+    }
+    if(secuencia[0]==3){
+        buttongreen.classList.toggle("active");
+    }
+    
     console.log(secuencia);
     return secuencia;
 }
