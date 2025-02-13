@@ -49,8 +49,12 @@ body{
   .red {
       width: 100px;
     height: 100px;
-    background-color: red;
+    background-color: rgb(239, 102, 102);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
+  }
+  .red.active {
+    background-color: rgb(255, 38, 0);
+    box-shadow: 0 5px 10px rgb(red) ;
   }
 
   .blue {
@@ -60,6 +64,14 @@ body{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
   }
 
+  .blue.active{
+    background-color: aqua;
+    box-shadow:0 5px 10px rgb( blue);
+  }
+
+
+  
+
   .green {
       width: 100px;
     height: 100px;
@@ -67,12 +79,28 @@ body{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
   }
 
+  .green.active{
+    background-color: chartreuse;
+    box-shadow: 0 5px 10px green;
+  }
+
+
+  
+
   .yellow {
       width: 100px;
     height: 100px;
-    background-color: yellow;
+    background-color: rgb(246, 246, 186);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
   }
+
+  .yellow.active{
+    background-color: rgb(255, 213, 0);
+    box-shadow: 0 5px 10px rgb(239, 239, 113) ;
+  }
+
+
+  
 
 
   
