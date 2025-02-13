@@ -11,8 +11,9 @@ const buttongreen = document.getElementById("green");
 const buttonyellow = document.getElementById("yellow");
 const boton = document.querySelector(".boton");
 const audio = document.querySelector(".audio");
+const audiolobby1 = document.querySelector("audio2");
 
-// Obtener o solicitar el nombre del usuario
+// Obtener o solicitar el nombre del usuario, el cliar
 let userName = localStorage.getItem("userName");
 if (!userName) {
     userName = prompt("Ingresa tu nombre:");
@@ -66,8 +67,8 @@ function reproducirSecuencia() {
 // Función para obtener un botón por su número
 function obtenerBotonPorNumero(numero) {
     switch (numero) {
-        case 0: return buttonred;
-        case 1: return buttonblue;
+        case 0: return buttonred; //rojo
+        case 1: return buttonblue; //azul
         case 2: return buttonyellow; // Amarillo
         case 3: return buttongreen; // Verde
     }
@@ -152,7 +153,7 @@ buttonblue.addEventListener("click", () => manejarInput(1));
 buttonyellow.addEventListener("click", () => manejarInput(2)); // Amarillo
 buttongreen.addEventListener("click", () => manejarInput(3)); // Verde
 
-// Event listener para el botón de inicio
+// START
 boton.addEventListener("click", () => {
     if (secuencia.length === 0) {
         // Solo iniciar el juego si no hay una secuencia activa
@@ -165,6 +166,5 @@ boton.addEventListener("click", () => {
 // Mostrar el top de puntuaciones al cargar la página
 mostrarTopPuntajes();
 
+
 localStorage.clear();
-let mySound = new Audio('Lobby.mp3')
-mySound.play()
